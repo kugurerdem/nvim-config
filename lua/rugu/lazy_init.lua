@@ -12,12 +12,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-    -- Theme and view
-    { 'rafi/awesome-vim-colorschemes' }, -- Retro Scheme
+local lazy = require('lazy')
 
-    -- Plugins
-    { 'tpope/vim-commentary' }, -- For Commenting gcc & gc
-    { 'vim-airline/vim-airline' },
-    { 'github/copilot.vim' },
+lazy.setup({
+    spec = 'rugu.lazy',
+    change_detection = { notify = false },
 })
+

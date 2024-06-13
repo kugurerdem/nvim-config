@@ -1,4 +1,4 @@
 require('rugu.set')
 require('rugu.keymap')
 require('rugu.autocmd')
-require('rugu.plugins')
+require('rugu.lazy_init')
